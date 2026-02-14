@@ -1,6 +1,6 @@
 import time
 import httpx
-from config import BINANCE_BASE, SYMBOLS_CACHE_TTL
+from .config import BINANCE_BASE, SYMBOLS_CACHE_TTL
 
 # Sembol listesi cache (bellekte tutulur, uygulama yeniden başlayana kadar geçerli)
 _symbols_cache: list[str] = []

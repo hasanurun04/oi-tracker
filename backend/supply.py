@@ -4,7 +4,7 @@ Her coin ayrı ayrı sorgulanır, startup'ta toplu istek atmaz.
 """
 import time
 import httpx
-from config import CMC_BASE, CMC_API_KEY, COINGECKO_BASE, SUPPLY_CACHE_TTL
+from .config import CMC_BASE, CMC_API_KEY, COINGECKO_BASE, SUPPLY_CACHE_TTL
 
 # { "BTCUSDT": (supply, timestamp) }
 _supply_cache: dict[str, tuple[float, float]] = {}

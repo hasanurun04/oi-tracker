@@ -7,8 +7,8 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 
-import binance
-import supply
+from . import binance
+from . import supply
 
 
 @asynccontextmanager

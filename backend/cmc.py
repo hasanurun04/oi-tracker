@@ -1,6 +1,6 @@
 import time
 import httpx
-from config import CMC_BASE, CMC_API_KEY, SUPPLY_CACHE_TTL
+from .config import CMC_BASE, CMC_API_KEY, SUPPLY_CACHE_TTL
 
 # ── Sembol → CMC ID + supply map ──────────────────────────
 # { "BTC": { "id": 1, "supply": 19700000.0, "ts": 1234567890 } }
