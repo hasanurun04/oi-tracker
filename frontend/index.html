@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OI Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-left">
+      <div class="logo">
+        <span class="logo-blink">&#9646;</span>
+        <span class="logo-text">OI//SUPPLY</span>
+      </div>
+      <div class="header-meta">
+        <span class="header-title">Futures Leverage Monitor</span>
+        <span class="header-sub">Binance USDT-M &middot; CoinGecko Supply</span>
+      </div>
+    </div>
+    <div class="header-right">
+      <div class="countdown-wrap">
+        <svg class="countdown-ring" viewBox="0 0 36 36">
+          <circle class="ring-bg" cx="18" cy="18" r="15" />
+          <circle class="ring-fill" id="ringFill" cx="18" cy="18" r="15" />
+        </svg>
+        <span class="countdown-num" id="countdownNum">30</span>
+      </div>
+      <div class="header-status">
+        <span class="status-dot" id="statusDot"></span>
+        <span class="status-label" id="statusLabel">HAZIR</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- SEARCH BAR -->
+  <div class="search-bar">
+    <div class="search-inner">
+      <div class="search-field-wrap">
+        <span class="search-prefix">&gt;</span>
+        <input
+          id="searchInput"
+          class="search-field"
+          type="text"
+          placeholder="Sembol ara... (BTC, ETH, SOL)"
+          autocomplete="off"
+          spellcheck="false"
+        />
+        <div class="search-dropdown" id="searchDropdown"></div>
+      </div>
+      <button class="btn-add" id="btnAdd" disabled>+ EKLE</button>
+      <div class="slot-counter">
+        <span id="slotUsed">0</span><span class="slot-sep">/</span><span class="slot-max">4</span>
+        <span class="slot-label">SLOT</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- EMPTY STATE -->
+  <div class="empty-state" id="emptyState">
+    <div class="empty-lines">
+      <div class="empty-line"></div>
+      <div class="empty-line"></div>
+      <div class="empty-line"></div>
+    </div>
+    <p class="empty-title">-- coin secilmedi --</p>
+    <p class="empty-hint">Aramadan bir sembol sec ve <strong>+ EKLE</strong>'ye bas</p>
+  </div>
+
+  <!-- CARDS GRID -->
+  <main class="cards-grid" id="cardsGrid"></main>
+
+  <script src="/assets/app.js"></script>
+</body>
+</html>
